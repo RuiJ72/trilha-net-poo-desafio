@@ -3,7 +3,9 @@ namespace DesafioPOO.Models
     public abstract class Smartphone
     {
         public string Numero { get; set; }
-        public string Modelo { get; }
+
+        // Propriedades Privadas
+        private string Modelo { get; }
         private int Imei { get; }
         private int Memoria { get; }
 
@@ -12,17 +14,20 @@ namespace DesafioPOO.Models
             Numero = numero;
             Modelo = modelo;
             Imei = imei;
-            Memoria = memoria;  
+            Memoria = memoria;
         }
+
+
 
         public void Ligar()
         {
-            Console.WriteLine("Estabelecendo a ligação...");
+            Console.WriteLine("Estabelecendo uma Ligação");
         }
 
+        // Método para estabelecer uma ligação
         public void ReceberLigacao()
         {
-            Console.WriteLine("Recebendo uma ligação...");
+            Console.WriteLine("Recebendo uma Ligação");
         }
 
         // Método para exibir número
@@ -31,6 +36,6 @@ namespace DesafioPOO.Models
             Console.WriteLine(this.Numero);
         }
 
-        public abstract void InstalarAplicativo(string nomeApp);
+        public abstract void InstalarAplicativo(string app);
     }
 }
